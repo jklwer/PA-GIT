@@ -29,4 +29,14 @@
 6. 파일을 원하는 commit 지점으로 되돌리기
 	git reset --soft 커밋지점 : commit 내역을 되돌리고 commit 만 취소(staging area에는 파일이 남아있다.)
 	git reset --mixed 커밋지점 : commit 내역을 되돌리고 staging까지 취소
-	git reset --hard 커밋지점 : commit 내역을 되돌리고 파일을 원하는 commit지점으로 rillback
+	git reset --hard 커밋지점 : commit 내역을 되돌리고 파일을 원하는 commit지점으로 rollback
+	git reset 커밋지점 : 지정된 commit으로 인해 발생한 변경을 되돌린다. 새로운 commit 
+
+7. 원격 리포지토리 추가 및 push/pull하기
+	git remote add origin repository주소
+	git pull --allow-unrelated-histories origin main
+		* 원격 리포지토리에서 처음 pull할때만
+	git push -u origin main
+		-u : push할 기본 원격저장소와 브랜치를 기억
+		     앞으로는 push할 때 원격저장소와 브랜치를 작성할 필요가 없다.
+
